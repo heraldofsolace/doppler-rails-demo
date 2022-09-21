@@ -1,0 +1,60 @@
+projects:
+  - name: rails-app
+    description: Ruby on Rails sample app
+    environments:
+      - slug: dev
+        name: Development
+        configs:
+          - slug: dev
+      - slug: stg
+        name: Staging
+        configs:
+          - slug: stg
+      - slug: prd
+        name: Production
+        configs:
+          - slug: prd
+      - slug: infra
+        name: Infra
+        configs:
+          - slug: infra
+          - slug: infra_dev
+          - slug: infra_stg
+          - slug: infra_prd
+    secrets:
+      dev:
+        API_KEY: cc981682-f06d-4135-9008-06ce9fc53681
+        DATABASE_HOST: 127.0.0.1
+        DATABASE_NAME: rails_dev
+        DATABASE_PASSWORD: QaXOZWr5KJDDqrzEhqA=
+        DATABASE_PORT: '3306'
+        DATABASE_USERNAME: rails-app
+        RAILS_MASTER_KEY: REFERENCE ME
+        SECRET_KEY_BASE: >-
+          7d1985516fb017a768e791211175f93ee5a2c7c1d27411607454d2db9821aea57ffde7868ca8a73f5be9942183e651b2e28b61f13e55bb4260d481fc7ebdae13
+      stg:
+        API_KEY: d1d3153d-a3c5-44ee-99d6-19f90fcd4f7c
+        DATABASE_HOST: 0.0.0.0
+        DATABASE_NAME: rails_stg
+        DATABASE_PASSWORD: QaXOZWr5KJDDqrzEhqA=
+        DATABASE_PORT: '3306'
+        DATABASE_USERNAME: rails-app
+        RAILS_MASTER_KEY: REFERENCE ME
+        SECRET_KEY_BASE: >-
+          91754ba55215e90591f1291aa32a4a00f5691a93dd1f82fa4d5e5a6f8b5bf1dd229fb15735ab8dd5dc2cdc931dcab63b6c52298a7aeaa722b4878918ad14d509
+      prd:
+        API_KEY: 783c8ea1-245e-409d-962a-54bcad7a4bd3
+        DATABASE_HOST: 0.0.0.0
+        DATABASE_NAME: rails_prd
+        DATABASE_PASSWORD: QaXOZWr5KJDDqrzEhqA=
+        DATABASE_PORT: '3306'
+        DATABASE_USERNAME: rails-app
+        RAILS_MASTER_KEY: REFERENCE ME
+        SECRET_KEY_BASE: >-
+          61a3aa7e89f4d9b935adc53f1d2eb4e5efed3fcab182730b1a560f0fd0e6f8750fc0d431bdf016811ca71b28910e95ae9dbaf9aaba303bb005bbcd795469f7c4
+      infra_dev:
+        RAILS_MASTER_KEY: 027f18d567b5aebfa4127032a468fc9b
+      infra_stg:
+        RAILS_MASTER_KEY: 031f5871836ed4e00cfa6a8c428f8ac8
+      infra_prd:
+        RAILS_MASTER_KEY: d63f266118d9e521201d15457bca6d0f

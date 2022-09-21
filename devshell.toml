@@ -1,0 +1,16 @@
+[devshell]
+packages = [
+  "doppler",
+  "rubyPackages.rails",
+  "ruby",
+  "zlib",
+  "sqlite",
+  "gcc",
+  "nodejs",
+  "yarn",
+  "redis"
+]
+
+[[commands]]
+package = "devshell.cli"
+help = "Per project developer environments"
