@@ -1,6 +1,6 @@
 SHELL := /usr/bin/env bash
 RAILS_MASTER_KEY=$$(doppler secrets get RAILS_MASTER_KEY --plain)
-.PHONY: sync-secrets view-secrets server db-create db-migrate db-rollback console generate docker-mysql-up docker-mysql-down
+.PHONY: sync-secrets view-secrets server db-create db-migrate db-rollback console generate docker-mysql-up docker-mysql-down test
 
 setup-doppler-project:
 	@doppler import --silent
@@ -47,3 +47,6 @@ docker-mysql-up:
 docker-mysql-down:
 	-docker stop mysql
 	-docker rm mysql
+
+test:
+	@RAILS_MASTER_KEY=$(RAILS_MASTER_KEY) bin/rails test
