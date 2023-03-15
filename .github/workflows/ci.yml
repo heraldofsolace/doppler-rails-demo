@@ -21,4 +21,4 @@ jobs:
       - name: Install dependencies
         run: bin/bundle install
       - name: Run tests
-        run: RAILS_MASTER_KEY=${secrets.RAILS_MASTER_KEY} bin/rails test
+        run: RAILS_MASTER_KEY=${{ secrets.RAILS_MASTER_KEY }} bin/rails test
