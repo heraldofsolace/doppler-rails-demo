@@ -1,6 +1,6 @@
 # Environments inherit default as values are set by Doppler for each environment
 default: &default
-  adapter: mysql2
+  adapter: sqlite3
   encoding: utf8
   host: <%= Rails.application.credentials.dig(:database_host) %>
   database: <%= Rails.application.credentials.dig(:database_name) %>
